@@ -1,10 +1,10 @@
 const skills = [
-  { name: "HTML & CSS", level: 95 },
-  { name: "JavaScript", level: 90 },
-  { name: "React", level: 85 },
-  { name: "Node.js", level: 80 },
-  { name: "TypeScript", level: 80 },
-  { name: "MongoDB", level: 75 },
+  { name: "C / C++ ", level: 95 },
+  { name: "Java", level: 90 },
+  { name: "Python", level: 85 },
+  { name: "Mysql", level: 80 },
+  { name: "React.js", level: 80 },
+  { name: "Node.js", level: 75 },
 ];
 
 export default skills;

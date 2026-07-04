@@ -1,12 +1,11 @@
+import profileImage from "../assets/images/profile.jpg";
+
 const About = () => (
   <section id="about" className="about-section">
     <h2 className="section-heading">About Myself</h2>
     <div className="about-grid">
       <div className="about-image">
-        <img
-          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
-          alt="Profile"
-        />
+        <img src={profileImage} alt="Profile" />
       </div>
       <div className="about-content">
         <h3 className="about-title">Software Engineer & Aspiring AI Enthusiast</h3>
