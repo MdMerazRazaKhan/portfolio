@@ -1,18 +1,19 @@
 import skills from "../data/skills";
 
 const techs = [
-  "React",
-  "Node.js",
-  "Express",
-  "MongoDB",
   "Git",
-  "Redux",
+  "GitHub",
+  "Express.js",
+  "MongoDB",
+  "Linux",
   "Next.js",
-  "GraphQL",
-  "Docker",
-  "AWS",
-  "Firebase",
-  "Jest",
+  "Tailwind CSS",
+  "HTML5",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+  "Rest API",
+
 ];
 
 const Skills = () => (

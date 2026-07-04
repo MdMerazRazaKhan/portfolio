@@ -9,4 +9,4 @@ export const NAV_ITEMS = [
   { label: "Download CV", href: "#download" },
 ];
 
-export const CONTACT_EMAIL = "john.doe@example.com";
+export const CONTACT_EMAIL = "merazrazakhan8240@gmail.com";

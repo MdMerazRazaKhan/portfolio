@@ -5,14 +5,7 @@ const Footer = () => (
         <p className="footer-title">Md Meraz Raza Khan</p>
           <p className="footer-subtitle">Software Engineer & Aspiring AI Enthusiat</p>
       </div>
-      <div className="footer-connect">
-        <p className="footer-connect-title">Connect With Me</p>
-        <div className="footer-connect-icons">
-          <a href="#" aria-label="Dribbble">D</a>
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="Email">✉</a>
-        </div>
-      </div>
+      {/* connect section removed; social links moved to Contact section */}
     </div>
     <div className="footer-divider" />
     <div className="footer-bottom">
