@@ -9,9 +9,9 @@ const About = () => (
         />
       </div>
       <div className="about-content">
-        <h3 className="about-title">Full Stack Developer & Software Engineer</h3>
+        <h3 className="about-title">Software Engineer & Aspiring AI Enthusiast</h3>
         <p className="about-intro">
-          I am a passionate Full Stack Developer with expertise in building robust and scalable web applications. With a strong foundation in both front-end and back-end technologies, I strive to create seamless user experiences through clean and efficient code.
+          I am a passionate Software Engineer & Aspiring AI Enthusiast and a Computer Science undergraduate specializing in Cyber Security. I have a strong interest in Full-Stack Development, Data Structures & Algorithms, and AI-driven applications. I enjoy building scalable, user-friendly web applications and solving real-world problems through clean, efficient, and maintainable code.
         </p>
         <p className="about-intro">
           My journey in software engineering has equipped me with a diverse skill set, allowing me to tackle complex challenges and deliver innovative solutions. I am committed to continuous learning and staying updated with the latest industry trends.
@@ -19,12 +19,12 @@ const About = () => (
         <div className="about-details">
           <div>
             <p><strong>Name:</strong> Md Meraz Raza Khan</p>
-            <p><strong>Experience:</strong> 5+ Years</p>
+            <p><strong>Experience:</strong> Fresher</p>
             <p><strong>Location:</strong> Kolkata, West Bengal</p>
           </div>
           <div>
-            <p><strong>Degree:</strong> Master's in Computer Science</p>
-            <p><strong>Email:</strong> merazraza.khan@example.com</p>
+            <p><strong>Degree:</strong> Bachelors in Technology</p>
+            <p><strong>Department:</strong> Computer Science and Engineering in Cyber Security</p>
             <p><strong>Freelance:</strong> Available</p>
           </div>
         </div>

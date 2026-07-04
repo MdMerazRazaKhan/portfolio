@@ -1,8 +1,25 @@
 import skills from "../data/skills";
 
+const techs = [
+  "React",
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "Git",
+  "Redux",
+  "Next.js",
+  "GraphQL",
+  "Docker",
+  "AWS",
+  "Firebase",
+  "Jest",
+];
+
 const Skills = () => (
-  <section id="skills">
-    <h2 className="section-heading">My Coding Skills</h2>
+  <section id="skills" className="skills-section">
+    <h2 className="section-heading">
+      My <span>Coding Skills</span>
+    </h2>
     <div className="skills-grid">
       {skills.map((skill) => (
         <div key={skill.name} className="skill-item">
@@ -11,8 +28,17 @@ const Skills = () => (
             <span>{skill.level}%</span>
           </div>
           <div className="skill-bar">
-            <div className="skill-fill" style={{ width: `${skill.level}%` }} />
+            <div className="skill-fill" style={{ "--target": `${skill.level}%` }} />
           </div>
+        </div>
+      ))}
+    </div>
+
+    <h3 className="tech-heading">Technologies I Work With</h3>
+    <div className="tech-grid">
+      {techs.map((tech) => (
+        <div key={tech} className="tech-chip">
+          {tech}
         </div>
       ))}
     </div>

@@ -33,30 +33,30 @@
 }
 
 [data-theme="light"] {
-  --body-bg: #f8fafc;
+  --body-bg: #fffaf0;
   --body-text: #0f172a;
-  --surface: rgba(15, 23, 42, 0.08);
-  --surface-border: rgba(148, 163, 184, 0.22);
-  --surface-hover: rgba(15, 23, 42, 0.12);
-  --nav-bg: rgba(255, 255, 255, 0.94);
-  --nav-border: rgba(15, 23, 42, 0.08);
+  --surface: rgba(15, 23, 42, 0.04);
+  --surface-border: rgba(15, 23, 42, 0.06);
+  --surface-hover: rgba(15, 23, 42, 0.06);
+  --nav-bg: rgba(255, 255, 250, 0.98);
+  --nav-border: rgba(15, 23, 42, 0.06);
   --nav-link: #475569;
   --nav-link-hover: #0f172a;
-  --badge-bg: rgba(59, 130, 246, 0.12);
+  --badge-bg: rgba(59, 130, 246, 0.08);
   --badge-text: #2563eb;
   --button-bg: #2563eb;
   --button-text: #fff;
-  --shadow: rgba(37, 99, 235, 0.16);
-  --surface-text: #334155;
-  --footer-text: #64748b;
-  --cursor-glow: rgba(37, 99, 235, 0.18);
-  --hero-bg: #ffffff;
-  --hero-border: rgba(15, 23, 42, 0.08);
-  --hero-shadow: rgba(15, 23, 42, 0.08);
-  --card-bg: #ffffff;
-  --card-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
-  --input-bg: #f8fafc;
-  --input-border: rgba(148, 163, 184, 0.22);
+  --shadow: rgba(37, 99, 235, 0.12);
+  --surface-text: #475569;
+  --footer-text: #556471;
+  --cursor-glow: rgba(37, 99, 235, 0.14);
+  --hero-bg: #fffdf6;
+  --hero-border: rgba(15, 23, 42, 0.06);
+  --hero-shadow: rgba(15, 23, 42, 0.06);
+  --card-bg: #fffdf8;
+  --card-shadow: 0 18px 40px rgba(2, 6, 23, 0.06);
+  --input-bg: #fffdf6;
+  --input-border: rgba(15, 23, 42, 0.06);
 }
 
 * {
@@ -123,6 +123,145 @@ section {
 
 .about-section {
   padding: 4rem 0;
+}
+
+.skills-section {
+  padding: 4rem 0;
+}
+
+.achievements-section {
+  padding: 4rem 0;
+}
+
+.achievements-section .section-heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.achievements-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.achievement-card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1.75rem;
+  background: var(--card-bg);
+  border: 1px solid var(--surface-border);
+  border-radius: 1.5rem;
+  box-shadow: var(--card-shadow);
+}
+
+.achievement-year {
+  min-width: 56px;
+  min-height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #7c3aed;
+  color: white;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.achievement-body h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--body-text);
+}
+
+.achievement-body p {
+  margin: 0.65rem 0 0;
+  color: #64748b;
+  line-height: 1.8;
+}
+
+@media (max-width: 860px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skills-section .section-heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.skills-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.skill-item {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.skill-name {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-weight: 700;
+  color: var(--body-text);
+}
+
+.skill-bar {
+  height: 0.75rem;
+  width: 100%;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: #7c3aed;
+  width: 0;
+  transition: width 1.1s cubic-bezier(.2,.9,.2,1);
+}
+
+/* animate skill fills when their reveal wrapper becomes visible */
+[data-reveal].is-visible .skill-fill {
+  width: var(--target);
+}
+
+.tech-heading {
+  text-align: center;
+  margin: 3rem auto 1.5rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.tech-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tech-chip {
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  background: rgba(15, 23, 42, 0.04);
+  color: var(--body-text);
+  text-align: center;
+  font-weight: 600;
+}
+
+@media (max-width: 860px) {
+  .skills-grid,
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .about-section .section-heading {
@@ -197,6 +336,83 @@ section {
 .container {
   display: grid;
   gap: 1.5rem;
+}
+
+/* Activities Section */
+.activities-section {
+  padding: 3.5rem 0;
+}
+
+.activities-section .section-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.activity-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.activity-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.25rem;
+  background: var(--card-bg);
+  border: 1px solid var(--surface-border);
+  border-radius: 1rem;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(2,6,23,0.12);
+}
+
+.activity-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 1.35rem;
+  background: rgba(124, 58, 237, 0.08);
+}
+
+.activity-body h3 {
+  margin: 0 0 0.35rem 0;
+  color: var(--body-text);
+  font-size: 1.05rem;
+}
+
+.activity-body p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+@media (max-width: 980px) {
+  .activity-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .activity-grid {
+    grid-template-columns: 1fr;
+  }
+  .activity-card {
+    align-items: center;
+  }
+  .activity-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+  }
 }
 
 [data-reveal] {
@@ -359,6 +575,7 @@ nav {
   opacity: 0;
   transform: translateX(10px);
   white-space: pre-wrap;
+  animation: heroNameTyping 2.4s ease forwards;
 }
 
 @keyframes heroNameTyping {
@@ -401,7 +618,6 @@ nav {
   }
 }
 
-.hero p,
 .card p,
 .contact-card p,
 .footer-note {
@@ -853,3 +1069,25 @@ nav {
   cursor: pointer;
   box-shadow: 0 15px 30px rgba(37, 99, 235, 0.16);
 }
+
+/* Slight scale up for interactive boxes on hover */
+.card,
+.activity-card,
+.download-card,
+.contact-card,
+.skill-item,
+.achievement-card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card:hover,
+.activity-card:hover,
+.download-card:hover,
+.contact-card:hover,
+.skill-item:hover,
+.achievement-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* Floating social links */
+/* floating social links removed per user request */

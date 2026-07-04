@@ -42,11 +42,11 @@ const ContactForm = () => {
           <div className="form-row">
             <div className="form-field">
               <label htmlFor="name">Your Name</label>
-              <input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="John Doe" required />
+              <input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Md Meraz Raza Khan" required />
             </div>
             <div className="form-field">
               <label htmlFor="email">Your Email</label>
-              <input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="johndoe@example.com" required />
+              <input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="merazrazakhan8240@gmail.com" required />
             </div>
           </div>
 

@@ -3,7 +3,7 @@ const Footer = () => (
     <div className="footer-top">
       <div className="footer-profile">
         <p className="footer-title">Md Meraz Raza Khan</p>
-        <p className="footer-subtitle">Full Stack Developer</p>
+          <p className="footer-subtitle">Software Engineer & Aspiring AI Enthusiat</p>
       </div>
       <div className="footer-connect">
         <p className="footer-connect-title">Connect With Me</p>
@@ -24,6 +24,7 @@ const Footer = () => (
         <a href="#contact">Contact</a>
       </div>
     </div>
+    {/* floating social links removed */}
   </footer>
 );
 

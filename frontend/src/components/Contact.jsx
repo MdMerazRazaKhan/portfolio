@@ -7,8 +7,8 @@ const Contact = () => (
       <div className="contact-card">
         <div className="contact-icon">📞</div>
         <h3>Phone</h3>
-        <p>+1 (123) 456-7890</p>
-        <a className="button button-secondary" href="tel:+11234567890">
+        <p>+91 82403 65876</p>
+        <a className="button button-secondary" href="tel:+918240365876">
           Call Now
         </a>
       </div>
@@ -23,8 +23,8 @@ const Contact = () => (
       <div className="contact-card">
         <div className="contact-icon">💬</div>
         <h3>WhatsApp</h3>
-        <p>+1 (123) 456-7890</p>
-        <a className="button button-secondary" href="https://wa.me/11234567890" target="_blank" rel="noreferrer">
+        <p>+91 82403 65876</p>
+        <a className="button button-secondary" href="https://wa.me/918240365876" target="_blank" rel="noreferrer">
           Message on WhatsApp
         </a>
       </div>
