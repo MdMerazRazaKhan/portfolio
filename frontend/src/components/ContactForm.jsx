@@ -34,7 +34,9 @@ const ContactForm = () => {
 
   return (
     <section id="message" className="contact-form-section">
-      <h2 className="section-heading">Send Message</h2>
+      <h2 className="section-heading">
+        Send <span>Message</span>
+      </h2>
       <div className="form-card">
         <form onSubmit={handleSubmit}>
           <div className="form-row">

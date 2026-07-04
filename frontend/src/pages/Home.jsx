@@ -15,14 +15,30 @@ function Home({ theme, onToggleTheme }) {
     <>
       <Navbar theme={theme} onToggleTheme={onToggleTheme} />
       <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Achievements />
-        <Activities />
-        <Contact />
-        <ContactForm />
-        <DownloadCV />
+        <div data-reveal>
+          <Hero />
+        </div>
+        <div data-reveal>
+          <About />
+        </div>
+        <div data-reveal>
+          <Skills />
+        </div>
+        <div data-reveal>
+          <Achievements />
+        </div>
+        <div data-reveal>
+          <Activities />
+        </div>
+        <div data-reveal>
+          <Contact />
+        </div>
+        <div data-reveal>
+          <ContactForm />
+        </div>
+        <div data-reveal>
+          <DownloadCV />
+        </div>
       </main>
       <Footer />
       <ScrollToTop />

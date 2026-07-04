@@ -9,6 +9,7 @@ const About = () => (
         />
       </div>
       <div className="about-content">
+        <h3 className="about-title">Full Stack Developer & Software Engineer</h3>
         <p className="about-intro">
           I am a passionate Full Stack Developer with expertise in building robust and scalable web applications. With a strong foundation in both front-end and back-end technologies, I strive to create seamless user experiences through clean and efficient code.
         </p>
@@ -18,7 +19,8 @@ const About = () => (
         <div className="about-details">
           <div>
             <p><strong>Name:</strong> Md Meraz Raza Khan</p>
-            <p><strong>Location:</strong> Kolkata , West Bengal</p>
+            <p><strong>Experience:</strong> 5+ Years</p>
+            <p><strong>Location:</strong> Kolkata, West Bengal</p>
           </div>
           <div>
             <p><strong>Degree:</strong> Master's in Computer Science</p>

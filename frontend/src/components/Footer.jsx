@@ -1,23 +1,29 @@
 const Footer = () => (
-  <footer>
-    <div className="footer-inner">
-      <div>
-        <p className="footer-title">John Doe</p>
-        <p>Full Stack Developer</p>
+  <footer className="site-footer">
+    <div className="footer-top">
+      <div className="footer-profile">
+        <p className="footer-title">Md Meraz Raza Khan</p>
+        <p className="footer-subtitle">Full Stack Developer</p>
       </div>
-      <div className="footer-links">
+      <div className="footer-connect">
+        <p className="footer-connect-title">Connect With Me</p>
+        <div className="footer-connect-icons">
+          <a href="#" aria-label="Dribbble">D</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Email">✉</a>
+        </div>
+      </div>
+    </div>
+    <div className="footer-divider" />
+    <div className="footer-bottom">
+      <p className="footer-copyright">© 2026 Md Meraz Raza Khan. All rights reserved.</p>
+      <div className="footer-nav">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </div>
-      <div className="footer-social">
-        <a href="#">LinkedIn</a>
-        <a href="#">GitHub</a>
-        <a href="#">Email</a>
-      </div>
     </div>
-    <p className="footer-note">© 2026 John Doe. All rights reserved.</p>
   </footer>
 );
 
