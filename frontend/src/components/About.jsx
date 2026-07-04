@@ -17,13 +17,12 @@ const About = () => (
         </p>
         <div className="about-details">
           <div>
-            <p><strong>Name:</strong> John Doe</p>
-            <p><strong>Experience:</strong> 5+ Years</p>
-            <p><strong>Location:</strong> New York, USA</p>
+            <p><strong>Name:</strong> Md Meraz Raza Khan</p>
+            <p><strong>Location:</strong> Kolkata , West Bengal</p>
           </div>
           <div>
             <p><strong>Degree:</strong> Master's in Computer Science</p>
-            <p><strong>Email:</strong> john.doe@example.com</p>
+            <p><strong>Email:</strong> merazraza.khan@example.com</p>
             <p><strong>Freelance:</strong> Available</p>
           </div>
         </div>

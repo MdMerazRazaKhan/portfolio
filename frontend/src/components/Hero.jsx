@@ -1,8 +1,8 @@
 const Hero = () => (
   <section id="home" className="hero hero-center">
-    <div className="hero-copy">
+    <div className="hero-box">
       <p className="badge">Portfolio</p>
-      <h1>John Doe</h1>
+      <h1 className="hero-name">John Doe</h1>
       <p className="hero-subtitle">Full Stack Developer & Software Engineer</p>
       <div className="hero-actions">
         <a className="button" href="#contact">

@@ -192,6 +192,20 @@ nav {
   text-decoration: none;
 }
 
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--nav-link);
+}
+
+.nav-icon {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  color: var(--nav-link);
+}
+
 .nav-links a:hover {
   color: #fff;
 }
@@ -207,11 +221,51 @@ nav {
   line-height: 1.05;
 }
 
+.hero-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+}
+
+.hero-box {
+  text-align: center;
+  max-width: 760px;
+  padding: 4rem 2.5rem;
+}
+
+.hero-name {
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: #7c3aed; /* purple */
+  filter: drop-shadow(0 6px 18px rgba(124,58,237,0.45));
+  font-weight: 800;
+  margin: 0.6rem 0 0.4rem;
+  letter-spacing: -0.02em;
+}
+
 .hero p,
 .card p,
 .contact-card p,
 .footer-note {
   color: #cbd5e1;
+}
+
+.hero-subtitle {
+  color: var(--surface-text);
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero-actions {
+  display: inline-flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.button-secondary {
+  background: transparent;
+  color: var(--body-text);
+  border: 1px solid rgba(15,23,42,0.08);
 }
 
 .grid-2 {
