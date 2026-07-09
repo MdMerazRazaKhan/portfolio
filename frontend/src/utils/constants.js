@@ -1,11 +1,13 @@
 export const NAV_ITEMS = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
+  { label: "Coding Skills", href: "#skills" },
+  { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
   { label: "Achievements", href: "#achievements" },
-  { label: "Activities", href: "#activities" },
-  { label: "Contact", href: "#contact" },
-  { label: "Message", href: "#message" },
+  { label: "Education", href: "#education" },
+  { label: "Contact Me", href: "#contact" },
+  { label: "Send Message", href: "#message" },
   { label: "Download CV", href: "#download" },
 ];
 

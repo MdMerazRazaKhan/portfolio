@@ -14,80 +14,119 @@ import codechef from "../assets/icons/codechef.svg";
 import instagram from "../assets/icons/instagram.svg";
 import snapchat from "../assets/icons/snapchat.svg";
 
+const PHONE_NUMBER = "+91 82403 65876";
+const PHONE_LINK = "918240365876";
+
+const EMAIL_SUBJECT = encodeURIComponent(
+  "Opportunity from your Portfolio"
+);
+
+const EMAIL_BODY = encodeURIComponent(
+  `Hi Meraz,
+
+I visited your portfolio and was impressed with your work.
+
+I would like to connect with you regarding an opportunity.
+
+Looking forward to hearing from you.
+
+Best Regards`
+);
+
+const WHATSAPP_MESSAGE = encodeURIComponent(
+  "Hi Meraz, I visited your portfolio and would like to connect with you regarding an opportunity."
+);
+
 const socials = [
   {
     name: "LinkedIn",
     icon: linkedin,
-    url: "https://linkedin.com/in/YOUR_USERNAME",
+    url: "https://www.linkedin.com/in/md-meraz-raza-khan-725097282/",
   },
   {
     name: "GitHub",
     icon: github,
-    url: "https://github.com/YOUR_USERNAME",
+    url: "https://github.com/MdMerazRazaKhan",
   },
   {
     name: "LeetCode",
     icon: leetcode,
-    url: "https://leetcode.com/YOUR_USERNAME",
+    url: "https://leetcode.com/u/MD_MERAZ_RAZA_KHAN/",
   },
   {
     name: "GeeksforGeeks",
     icon: gfg,
-    url: "https://auth.geeksforgeeks.org/user/YOUR_USERNAME",
+    url: "https://www.geeksforgeeks.org/profile/merazraza8el5",
   },
   {
     name: "Codeforces",
     icon: codeforces,
-    url: "https://codeforces.com/profile/YOUR_USERNAME",
+    url: "https://codeforces.com/profile/merazrazakhan8240",
   },
   {
     name: "Coding Ninjas",
     icon: codingninjas,
-    url: "https://www.codingninjas.com/profile/YOUR_USERNAME",
+    url: "https://www.naukri.com/code360/profile/7a4551d9-c1aa-4524-96f0-03d0c85ac3d1",
   },
   {
     name: "CodeChef",
     icon: codechef,
-    url: "https://www.codechef.com/users/YOUR_USERNAME",
+    url: "https://www.codechef.com/users/chunk_dawn_21",
   },
   {
     name: "Instagram",
     icon: instagram,
-    url: "https://instagram.com/YOUR_USERNAME",
+    url: "https://www.instagram.com/_.merazzz?igsh=MWdvZHA1bnFsODBqNQ==",
   },
   {
     name: "Snapchat",
     icon: snapchat,
-    url: "https://snapchat.com/add/YOUR_USERNAME",
+    url: "https://www.snapchat.com/add/mdmerazrazakh24?share_id=M4Pb34TL4_Q&locale=en-IN",
   },
 ];
 
 const Contact = () => {
   return (
-    <section id="contact">
-      <h2 className="section-heading">Contact Me</h2>
+    <section id="contact" className="achievements-section">
+      <h2 className="section-heading">
+        Contact <span>Me</span>
+      </h2>
 
       {/* Contact Cards */}
 
       <div className="contact-grid">
+        {/* Phone */}
 
         <div className="contact-card">
           <div className="contact-icon">
-            <img src={phoneIcon} alt="Phone" className="contact-image" />
+            <img
+              src={phoneIcon}
+              alt="Phone"
+              className="contact-image"
+            />
           </div>
 
           <h3>Phone</h3>
 
-          <p>+91 82403 65876</p>
+          <p>{PHONE_NUMBER}</p>
 
-          <a href="tel:+918240365876" className="button button-secondary">
+          <a
+            href={`tel:${PHONE_LINK}`}
+            className="button button-secondary"
+          >
             Call Now
           </a>
         </div>
 
+        {/* Email */}
+
         <div className="contact-card">
           <div className="contact-icon">
-            <img src={emailIcon} alt="Email" className="contact-image" />
+            <img
+              src={emailIcon}
+              alt="Email"
+              className="contact-image"
+            />
           </div>
 
           <h3>Email</h3>
@@ -95,26 +134,32 @@ const Contact = () => {
           <p>{CONTACT_EMAIL}</p>
 
           <a
-            href={`mailto:${CONTACT_EMAIL}`}
+            href={`mailto:${CONTACT_EMAIL}?subject=${EMAIL_SUBJECT}&body=${EMAIL_BODY}`}
             className="button button-secondary"
           >
             Send Email
           </a>
         </div>
 
+        {/* WhatsApp */}
+
         <div className="contact-card">
           <div className="contact-icon">
-            <img src={whatsappIcon} alt="WhatsApp" className="contact-image" />
+            <img
+              src={whatsappIcon}
+              alt="WhatsApp"
+              className="contact-image"
+            />
           </div>
 
           <h3>WhatsApp</h3>
 
-          <p>+91 82403 65876</p>
+          <p>{PHONE_NUMBER}</p>
 
           <a
-            href="https://wa.me/918240365876"
+            href={`https://wa.me/${PHONE_LINK}?text=${WHATSAPP_MESSAGE}`}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="button button-secondary"
           >
             Message on WhatsApp
@@ -122,17 +167,11 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Social Cards */}
+      {/* Social Profiles */}
 
       <div className="social-grid">
         {socials.map((social) => (
-          <a
-            key={social.name}
-            href={social.url}
-            target="_blank"
-            rel="noreferrer"
-            className="contact-card social-card"
-          >
+          <div key={social.name} className="contact-card social-card">
             <div className="contact-icon social-icon-wrapper">
               <img
                 src={social.icon}
@@ -142,8 +181,16 @@ const Contact = () => {
             </div>
 
             <h3>{social.name}</h3>
-            <span className="connect-button">Connect</span>
-          </a>
+
+            <a
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="connect-button"
+            >
+              Connect 
+            </a>
+          </div>
         ))}
       </div>
     </section>

@@ -2,8 +2,10 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Skills from "../components/Skills";
+import Experience from "../components/Experience";
+import Projects from "../components/Projects";
 import Achievements from "../components/Achievements";
-import Activities from "../components/Activities";
+import Education from "../components/Education";
 import Contact from "../components/Contact";
 import ContactForm from "../components/ContactForm";
 import DownloadCV from "../components/DownloadCV";
@@ -25,10 +27,16 @@ function Home({ theme, onToggleTheme }) {
           <Skills />
         </div>
         <div data-reveal>
+          <Experience />
+        </div>
+        <div data-reveal>
+          <Projects />
+        </div>
+        <div data-reveal>
           <Achievements />
         </div>
         <div data-reveal>
-          <Activities />
+          <Education />
         </div>
         <div data-reveal>
           <Contact />

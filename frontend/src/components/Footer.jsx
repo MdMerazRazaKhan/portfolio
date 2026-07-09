@@ -3,9 +3,8 @@ const Footer = () => (
     <div className="footer-top">
       <div className="footer-profile">
         <p className="footer-title">Md Meraz Raza Khan</p>
-          <p className="footer-subtitle">Software Engineer & Aspiring AI Enthusiat</p>
+        <p className="footer-subtitle">Software Engineer & Aspiring AI Enthusiast</p>
       </div>
-      {/* connect section removed; social links moved to Contact section */}
     </div>
     <div className="footer-divider" />
     <div className="footer-bottom">
@@ -14,10 +13,15 @@ const Footer = () => (
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact Me</a>
+        <a href="#message">Send Message</a>
+        <a href="#download">Download CV</a>
       </div>
     </div>
-    {/* floating social links removed */}
   </footer>
 );
 
