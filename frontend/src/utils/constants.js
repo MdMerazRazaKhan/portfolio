@@ -7,7 +7,7 @@ export const NAV_ITEMS = [
   { label: "Achievements", href: "#achievements" },
   { label: "Education", href: "#education" },
   { label: "Contact Me", href: "#contact" },
-  { label: "Send Message", href: "#message" },
+  { label: "Send Me", href: "#message" },
   { label: "Download CV", href: "#download" },
 ];
 

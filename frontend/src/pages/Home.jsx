@@ -12,10 +12,10 @@ import DownloadCV from "../components/DownloadCV";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
 
-function Home({ theme, onToggleTheme }) {
+function Home() {
   return (
     <>
-      <Navbar theme={theme} onToggleTheme={onToggleTheme} />
+      <Navbar />
       <main>
         <div data-reveal>
           <Hero />

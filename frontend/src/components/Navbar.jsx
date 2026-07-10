@@ -1,7 +1,8 @@
 import { NAV_ITEMS } from "../utils/constants";
+import { useTheme } from "../context/ThemeContext";
 
 const Icon = ({ type }) => {
-  const common = { className: "nav-icon", width: 16, height: 16, viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg" };
+  const common = { className: "nav-icon", width: 14, height: 14, viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg" };
   
   if (type === "home") {
     return (
@@ -88,41 +89,60 @@ const Icon = ({ type }) => {
   );
 };
 
-const Navbar = ({ theme, onToggleTheme }) => (
-  <nav>
-    <div className="nav-content">
-      <span className="badge">Portfolio</span>
-      <div className="nav-links">
-        {NAV_ITEMS.map((item) => {
-          const label = item.label || "";
-          const key = item.href;
-          const lower = label.toLowerCase();
-          let iconType = "text";
-          
-          if (lower.includes("home")) iconType = "home";
-          else if (lower.includes("about")) iconType = "about";
-          else if (lower.includes("skill")) iconType = "skills";
-          else if (lower.includes("experience")) iconType = "experience";
-          else if (lower.includes("project")) iconType = "projects";
-          else if (lower.includes("achievement")) iconType = "achievements";
-          else if (lower.includes("education")) iconType = "education";
-          else if (lower.includes("contact")) iconType = "contact";
-          else if (lower.includes("message")) iconType = "message";
-          else if (lower.includes("download") || lower.includes("cv")) iconType = "download";
+const Navbar = () => {
+  const { theme, toggleTheme } = useTheme();
 
-          return (
-            <a key={key} href={item.href} className="nav-link">
-              <Icon type={iconType} />
-              <span>{label}</span>
-            </a>
-          );
-        })}
-        <button type="button" className="theme-toggle" onClick={onToggleTheme}>
-          {theme === "dark" ? "Day" : "Night"}
+  return (
+    <nav>
+      <div className="nav-content">
+        <div className="nav-links">
+          {NAV_ITEMS.map((item) => {
+            const label = item.label || "";
+            const key = item.href;
+            const lower = label.toLowerCase();
+            let iconType = "text";
+            
+            if (lower.includes("home")) iconType = "home";
+            else if (lower.includes("about")) iconType = "about";
+            else if (lower.includes("skill")) iconType = "skills";
+            else if (lower.includes("experience")) iconType = "experience";
+            else if (lower.includes("project")) iconType = "projects";
+            else if (lower.includes("achievement")) iconType = "achievements";
+            else if (lower.includes("education")) iconType = "education";
+            else if (lower.includes("contact")) iconType = "contact";
+            else if (lower.includes("send") || lower.includes("message")) iconType = "message";
+            else if (lower.includes("download") || lower.includes("cv")) iconType = "download";
+
+            return (
+              <a key={key} href={item.href} className="nav-link">
+                <Icon type={iconType} />
+                <span>{label}</span>
+              </a>
+            );
+          })}
+        </div>
+        
+        <button 
+          type="button" 
+          className="theme-icon-toggle-btn" 
+          onClick={toggleTheme}
+          aria-label="Toggle theme"
+        >
+          {theme === "dark" ? (
+            <>
+              <svg className="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.62" x2="19.78" y2="4.2"></line></svg>
+              <span style={{ fontSize: "0.78rem", fontWeight: "600" }}>Light</span>
+            </>
+          ) : (
+            <>
+              <svg className="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+              <span style={{ fontSize: "0.78rem", fontWeight: "600" }}>Dark</span>
+            </>
+          )}
         </button>
       </div>
-    </div>
-  </nav>
-);
+    </nav>
+  );
+};
 
 export default Navbar;

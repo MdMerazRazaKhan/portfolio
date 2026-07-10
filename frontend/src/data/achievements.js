@@ -1,24 +1,24 @@
 const achievements = [
   {
+    year: "2024",
+    title: "NPTEL Cyber Security Certification",
+    details: "Completed advanced certification in Cyber Security, gaining expertise in cryptography, network security, and secure communication protocols.",
+  },
+  {
     year: "2023",
-    title: "Best Web Developer Award",
-    details: "Recognized as the top web developer for creating innovative and high-performance web applications.",
+    title: "Generative AI, Prompt Engineering & GPT-3",
+    details: "Earned certifications demonstrating practical knowledge of Large Language Models (LLMs) and real-world AI application development.",
   },
   {
-    year: "2022",
-    title: "Open Source Contribution Award",
-    details: "Contributed significantly to open-source projects, improving accessibility and performance.",
+    year: "2023",
+    title: "Deep Learning for Developers",
+    details: "Gained hands-on experience in neural networks, deep learning models, and model optimization techniques.",
   },
   {
-    year: "2021",
-    title: "Hackathon Winner",
-    details: "First place in the national coding competition for developing a sustainable technology solution.",
-  },
-  {
-    year: "2020",
-    title: "Publication in Tech Journal",
-    details: "Published research paper on optimizing React applications for better performance.",
-  },
+    year: "2023",
+    title: "250+ DSA Problems & Institute Rank 182",
+    details: "Solved over 250 Data Structures and Algorithms problems, achieving a coding score of 600+ and a top rank of 182.",
+  }
 ];
 
 export default achievements;

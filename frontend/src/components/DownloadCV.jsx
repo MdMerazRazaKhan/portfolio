@@ -11,7 +11,13 @@ const DownloadCV = () => (
           </div>
           <h3>{option.title}</h3>
           <p>{option.description}</p>
-          <a className="button" href={option.link}>
+          <a
+            className="button"
+            href={option.link}
+            download={option.download ? "MD_MERAZ_RAZA_KHAN_Resume.pdf" : undefined}
+            target={option.download ? undefined : "_blank"}
+            rel={option.download ? undefined : "noopener noreferrer"}
+          >
             {option.label}
           </a>
         </div>

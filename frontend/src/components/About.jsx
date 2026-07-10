@@ -2,7 +2,7 @@ import profileImage from "../assets/images/profile.jpg";
 
 const About = () => (
   <section id="about" className="about-section">
-    <h2 className="section-heading">About Myself</h2>
+    <h2 className="section-heading">About <span>Myself</span></h2>
     <div className="about-grid">
       <div className="about-image">
         <img src={profileImage} alt="Profile" />
