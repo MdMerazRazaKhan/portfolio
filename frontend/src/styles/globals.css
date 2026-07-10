@@ -154,6 +154,11 @@ section {
   margin-bottom: 1.5rem;
   font-size: clamp(1.75rem, 2.5vw, 2.5rem);
   letter-spacing: -0.04em;
+  color: var(--accent);
+}
+
+.section-heading span {
+  color: var(--accent);
 }
 
 .about-section {
@@ -1377,7 +1382,7 @@ nav {
   position: fixed;
   inset: 0;
   z-index: 1000;
-  background: rgba(5, 7, 15, 0.7);
+  background: rgba(5, 7, 15, 0.3); /* Soft translucent overlay instead of heavy black */
   backdrop-filter: blur(12px);
   display: grid;
   place-items: center;
@@ -1386,16 +1391,19 @@ nav {
   animation: modalFadeIn 0.25s ease forwards;
 }
 
+[data-theme="light"] .modal-backdrop {
+  background: rgba(255, 247, 236, 0.3); /* Matches light theme page color */
+}
+
 .modal-container {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(25px);
+  background: var(--body-bg); /* Matches the home page background color exactly */
+  border: 1px solid var(--surface-border);
   border-radius: 2rem;
   width: min(100%, 650px);
   max-height: 80vh;
   overflow-y: auto;
   padding: 2.5rem;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   position: relative;
   scrollbar-width: thin;
   scrollbar-color: var(--accent-soft) transparent;
@@ -1403,9 +1411,9 @@ nav {
 }
 
 [data-theme="light"] .modal-container {
-  background: rgba(255, 250, 242, 0.88);
-  border: 1px solid rgba(121, 80, 45, 0.18);
-  box-shadow: 0 30px 60px rgba(115, 83, 49, 0.15);
+  background: var(--body-bg); /* Matches the light theme home page color exactly */
+  border: 1px solid var(--surface-border);
+  box-shadow: 0 20px 40px rgba(121, 80, 45, 0.08);
 }
 
 .modal-header {
@@ -1441,6 +1449,98 @@ nav {
   border-color: var(--accent);
   color: var(--accent);
   transform: translateX(-2px);
+}
+
+.modal-intro {
+  margin-bottom: 1.5rem;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--body-text);
+  margin-bottom: 0.35rem;
+}
+
+.modal-subtitle {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.modal-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.badge-accent {
+  background: var(--accent-soft) !important;
+  color: var(--accent) !important;
+  border: 1px solid var(--accent-border) !important;
+}
+
+.modal-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.modal-info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--surface-border);
+  padding: 0.85rem 1rem;
+  border-radius: 1rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.modal-info-item:hover {
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="light"] .modal-info-item:hover {
+  background: rgba(121, 80, 45, 0.03);
+}
+
+.info-icon {
+  font-size: 1.3rem;
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+[data-theme="light"] .info-icon {
+  background: rgba(121, 80, 45, 0.04);
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.info-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--surface-text);
+  opacity: 0.85;
+}
+
+.info-value {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--body-text);
 }
 
 /* Animations */

@@ -7,7 +7,7 @@ const education = [
     board: "Maulana Abul Kalam Azad University of Technology (MAKAUT)",
     duration: "28/09/2022 - 30/06/2026",
     score: "CGPA: 7.38",
-    logo: "https://www.technoindiauniversity.ac.in/images/logo.png",
+    logo: "/assets/images/techno_logo.png",
     averageCgpa: "7.38",
     equivalentPercentage: "66.30%",
     semesters: [
@@ -44,7 +44,7 @@ const education = [
     board: "Central Board of Secondary Education (CBSE)",
     duration: "2020 - 2021",
     score: "Percentage: 76%",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Kendriya_Vidyalaya_Sangathan_Logo.svg/120px-Kendriya_Vidyalaya_Sangathan_Logo.svg.png",
+    logo: "/assets/images/kv_logo.png",
     coursework: [
       "Mathematics",
       "Physics",
@@ -66,7 +66,7 @@ const education = [
     board: "Central Board of Secondary Education (CBSE)",
     duration: "2018 - 2019",
     score: "Percentage: 84%",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Kendriya_Vidyalaya_Sangathan_Logo.svg/120px-Kendriya_Vidyalaya_Sangathan_Logo.svg.png",
+    logo: "/assets/images/kv_logo.png",
     coursework: [
       "Mathematics",
       "Science (Physics, Chemistry, Biology)",

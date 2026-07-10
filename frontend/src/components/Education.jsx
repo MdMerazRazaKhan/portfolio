@@ -38,13 +38,13 @@ const Education = () => {
       <div className="education-timeline">
         {education.map((item) => (
           <div key={item.id} className="timeline-item">
-            <div className="timeline-icon">
+            <div className="timeline-icon" style={{ overflow: "hidden", background: "#fff", display: "grid", placeItems: "center" }}>
               {item.logo && !logoError[item.id] ? (
                 <img 
                   src={item.logo} 
                   alt="" 
                   onError={() => setLogoError(prev => ({ ...prev, [item.id]: true }))}
-                  style={{ width: "100%", height: "100%", borderRadius: "50%", objectFit: "contain", padding: "0.25rem", background: "#fff" }} 
+                  style={{ width: "100%", height: "100%", borderRadius: "50%", objectFit: "contain", padding: "4px" }} 
                 />
               ) : (
                 item.id === "btech" ? "🎓" : "🏫"
@@ -73,7 +73,6 @@ const Education = () => {
         ))}
       </div>
 
-      {/* Modal Popup */}
       {selectedEdu && (
         <div className="modal-backdrop" onClick={handleBackdropClick}>
           <div 
@@ -90,38 +89,63 @@ const Education = () => {
                 <span>Back</span>
               </button>
             </div>
-            
-            <div style={{ display: "flex", gap: "0.5rem", marginBottom: "0.75rem", flexWrap: "wrap" }}>
-              <span className="badge">{selectedEdu.duration}</span>
-              <span className="badge" style={{ background: "var(--badge-bg)", color: "var(--badge-text)" }}>{selectedEdu.score}</span>
+
+            <div className="modal-intro">
+              <h3 className="modal-title">{selectedEdu.degree}</h3>
+              <p className="modal-subtitle">{selectedEdu.stream}</p>
+              <div className="modal-badges">
+                <span className="badge">{selectedEdu.duration}</span>
+                <span className="badge badge-accent">{selectedEdu.score}</span>
+              </div>
             </div>
 
-            <h3 style={{ fontSize: "1.5rem", color: "var(--body-text)", marginBottom: "0.25rem", paddingRight: "2rem" }}>{selectedEdu.degree}</h3>
-            <p style={{ color: "var(--accent)", fontWeight: "600", fontSize: "1.1rem", marginBottom: "1rem" }}>{selectedEdu.stream}</p>
-            
-            <div style={{ borderTop: "1px solid var(--surface-border)", paddingTop: "1rem", marginTop: "1rem", display: "grid", gap: "0.75rem", fontSize: "0.95rem" }}>
-              <p><strong>Institution:</strong> {selectedEdu.institution}</p>
-              <p><strong>Board/University:</strong> {selectedEdu.board}</p>
-              {selectedEdu.averageCgpa && (
-                <p><strong>Average CGPA:</strong> {selectedEdu.averageCgpa}</p>
-              )}
-              {selectedEdu.equivalentPercentage && (
-                <p><strong>Equivalent Percentage:</strong> {selectedEdu.equivalentPercentage}</p>
-              )}
-            </div>
-
-            <p style={{ marginTop: "1.25rem", lineHeight: "1.7", color: "var(--surface-text)", fontSize: "0.95rem" }}>
+            <p style={{ margin: "1.25rem 0", lineHeight: "1.7", color: "var(--surface-text)", fontSize: "0.98rem" }}>
               {selectedEdu.description}
             </p>
+            
+            <div className="modal-info-grid">
+              <div className="modal-info-item">
+                <div className="info-icon">🏫</div>
+                <div className="info-text">
+                  <span className="info-label">Institution</span>
+                  <span className="info-value">{selectedEdu.institution}</span>
+                </div>
+              </div>
+              <div className="modal-info-item">
+                <div className="info-icon">📜</div>
+                <div className="info-text">
+                  <span className="info-label">Board / University</span>
+                  <span className="info-value">{selectedEdu.board}</span>
+                </div>
+              </div>
+              {selectedEdu.averageCgpa && (
+                <div className="modal-info-item">
+                  <div className="info-icon">📊</div>
+                  <div className="info-text">
+                    <span className="info-label">Average Score</span>
+                    <span className="info-value">CGPA: {selectedEdu.averageCgpa}</span>
+                  </div>
+                </div>
+              )}
+              {selectedEdu.equivalentPercentage && (
+                <div className="modal-info-item">
+                  <div className="info-icon">📈</div>
+                  <div className="info-text">
+                    <span className="info-label">MAKAUT Score</span>
+                    <span className="info-value">Percentage: {selectedEdu.equivalentPercentage}</span>
+                  </div>
+                </div>
+              )}
+            </div>
 
             {selectedEdu.semesters && (
-              <div style={{ marginTop: "1.5rem" }}>
-                <h4 style={{ color: "var(--body-text)", marginBottom: "0.75rem", fontSize: "1.05rem" }}>Semester-wise Performance</h4>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(135px, 1fr))", gap: "0.75rem" }}>
+              <div style={{ marginTop: "1.75rem" }}>
+                <h4 style={{ color: "var(--body-text)", marginBottom: "0.75rem", fontSize: "1.1rem", fontWeight: "700" }}>Semester-wise Performance</h4>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(130px, 1fr))", gap: "0.75rem" }}>
                   {selectedEdu.semesters.map((s) => (
-                    <div key={s.sem} className="tech-chip" style={{ display: "flex", flexDirection: "column", gap: "0.25rem", padding: "0.5rem", textAlign: "center", borderRadius: "0.75rem", boxShadow: "none", margin: 0 }}>
-                      <span style={{ fontSize: "0.75rem", color: "var(--surface-text)" }}>{s.sem}</span>
-                      <span style={{ fontSize: "0.95rem", fontWeight: "700", color: "var(--accent)" }}>{s.cgpa}</span>
+                    <div key={s.sem} className="tech-chip" style={{ display: "flex", flexDirection: "column", gap: "0.25rem", padding: "0.6rem 0.5rem", textAlign: "center", borderRadius: "0.75rem", margin: 0, boxShadow: "none", background: "rgba(255,255,255,0.02)", border: "1px solid var(--surface-border)" }}>
+                      <span style={{ fontSize: "0.72rem", color: "var(--surface-text)", fontWeight: "500" }}>{s.sem}</span>
+                      <span style={{ fontSize: "1.05rem", fontWeight: "800", color: "var(--accent)" }}>{s.cgpa}</span>
                     </div>
                   ))}
                 </div>
@@ -129,8 +153,8 @@ const Education = () => {
             )}
 
             {selectedEdu.coursework && (
-              <div style={{ marginTop: "1.5rem" }}>
-                <h4 style={{ color: "var(--body-text)", marginBottom: "0.75rem", fontSize: "1.05rem" }}>Relevant Coursework</h4>
+              <div style={{ marginTop: "1.75rem" }}>
+                <h4 style={{ color: "var(--body-text)", marginBottom: "0.75rem", fontSize: "1.1rem", fontWeight: "700" }}>Relevant Coursework</h4>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
                   {selectedEdu.coursework.map((course) => (
                     <span key={course} className="tech-chip" style={{ fontSize: "0.8rem", padding: "0.4rem 0.8rem", borderRadius: "0.5rem", margin: 0, boxShadow: "none" }}>
@@ -142,11 +166,11 @@ const Education = () => {
             )}
 
             {selectedEdu.achievements && (
-              <div style={{ marginTop: "1.5rem" }}>
-                <h4 style={{ color: "var(--body-text)", marginBottom: "0.5rem", fontSize: "1.05rem" }}>Key Achievements</h4>
-                <ul style={{ paddingLeft: "1.25rem", color: "var(--surface-text)", display: "grid", gap: "0.5rem", fontSize: "0.9rem" }}>
+              <div style={{ marginTop: "1.75rem" }}>
+                <h4 style={{ color: "var(--body-text)", marginBottom: "0.6rem", fontSize: "1.1rem", fontWeight: "700" }}>Key Achievements</h4>
+                <ul style={{ paddingLeft: "1.25rem", color: "var(--surface-text)", display: "grid", gap: "0.55rem", fontSize: "0.92rem" }}>
                   {selectedEdu.achievements.map((ach, idx) => (
-                    <li key={idx} style={{ lineHeight: "1.6" }}>{ach}</li>
+                    <li key={idx} style={{ lineHeight: "1.65" }}>{ach}</li>
                   ))}
                 </ul>
               </div>
