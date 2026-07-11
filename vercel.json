@@ -23,7 +23,15 @@
       "dest": "frontend/assets/$1"
     },
     {
-      "src": "/(favicon.ico|robots.txt|manifest.json|.*\\.pdf|.*\\.png|.*\\.jpg|.*\\.svg)",
+      "src": "/MD%20MERAZ%20RAZA%20KHAN.pdf",
+      "dest": "frontend/MD MERAZ RAZA KHAN.pdf"
+    },
+    {
+      "src": "/MD MERAZ RAZA KHAN.pdf",
+      "dest": "frontend/MD MERAZ RAZA KHAN.pdf"
+    },
+    {
+      "src": "/(favicon.ico|robots.txt|manifest.json)",
       "dest": "frontend/$1"
     },
     {
