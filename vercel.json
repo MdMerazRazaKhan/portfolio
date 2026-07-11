@@ -23,7 +23,7 @@
       "dest": "frontend/assets/$1"
     },
     {
-      "src": "/(favicon.ico|robots.txt|manifest.json)",
+      "src": "/(favicon.ico|robots.txt|manifest.json|.*\\.pdf|.*\\.png|.*\\.jpg|.*\\.svg)",
       "dest": "frontend/$1"
     },
     {
