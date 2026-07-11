@@ -47,7 +47,18 @@ const Education = () => {
                   style={{ width: "100%", height: "100%", borderRadius: "50%", objectFit: "contain", padding: "4px" }} 
                 />
               ) : (
-                item.id === "btech" ? "🎓" : "🏫"
+                item.id === "btech" ? (
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--accent)" }}>
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+                  </svg>
+                ) : (
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--accent)" }}>
+                    <path d="M3 21h18"></path>
+                    <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"></path>
+                    <path d="M9 21v-4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4"></path>
+                  </svg>
+                )
               )}
             </div>
             
@@ -105,14 +116,27 @@ const Education = () => {
             
             <div className="modal-info-grid">
               <div className="modal-info-item">
-                <div className="info-icon">🏫</div>
+                <div className="info-icon" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", color: "var(--accent)" }}>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+                  </svg>
+                </div>
                 <div className="info-text">
                   <span className="info-label">Institution</span>
                   <span className="info-value">{selectedEdu.institution}</span>
                 </div>
               </div>
               <div className="modal-info-item">
-                <div className="info-icon">📜</div>
+                <div className="info-icon" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", color: "var(--accent)" }}>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                </div>
                 <div className="info-text">
                   <span className="info-label">Board / University</span>
                   <span className="info-value">{selectedEdu.board}</span>
@@ -120,7 +144,12 @@ const Education = () => {
               </div>
               {selectedEdu.averageCgpa && (
                 <div className="modal-info-item">
-                  <div className="info-icon">📊</div>
+                  <div className="info-icon" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", color: "var(--accent)" }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="8" r="7"></circle>
+                      <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                    </svg>
+                  </div>
                   <div className="info-text">
                     <span className="info-label">Average Score</span>
                     <span className="info-value">CGPA: {selectedEdu.averageCgpa}</span>
@@ -129,7 +158,13 @@ const Education = () => {
               )}
               {selectedEdu.equivalentPercentage && (
                 <div className="modal-info-item">
-                  <div className="info-icon">📈</div>
+                  <div className="info-icon" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", color: "var(--accent)" }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="18" y1="20" x2="18" y2="10"></line>
+                      <line x1="12" y1="20" x2="12" y2="4"></line>
+                      <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                  </div>
                   <div className="info-text">
                     <span className="info-label">MAKAUT Score</span>
                     <span className="info-value">Percentage: {selectedEdu.equivalentPercentage}</span>
