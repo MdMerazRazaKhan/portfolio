@@ -1132,11 +1132,12 @@ nav {
 }
 
 .footer-note {
-  color: #94a3b8;
+  color: var(--surface-text);
 }
 
 .site-footer {
   padding: 4rem 0 2rem;
+  background: var(--body-bg);
   color: var(--surface-text);
 }
 
@@ -1164,7 +1165,7 @@ nav {
 
 .footer-subtitle {
   margin: 0;
-  color: #64748b;
+  color: var(--surface-text);
 }
 
 .footer-connect {
@@ -1235,7 +1236,7 @@ nav {
 
 .footer-copyright {
   margin: 0;
-  color: #94a3b8;
+  color: var(--surface-text);
 }
 
 .footer-nav {
