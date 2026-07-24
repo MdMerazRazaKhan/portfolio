@@ -83,6 +83,11 @@
   box-sizing: border-box;
 }
 
+p, h1, h2, h3, h4, h5, h6, span, a, li, button, input, textarea {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
 html, body, #root {
   min-height: 100%;
 }
@@ -92,6 +97,7 @@ body {
   color: var(--body-text);
   line-height: 1.6;
   padding: 0 1rem;
+  overflow-x: hidden;
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -181,7 +187,7 @@ section {
 .achievements-grid {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -235,7 +241,7 @@ section {
 .skills-grid {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -283,7 +289,7 @@ section {
 .tech-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(130px, 100%), 1fr));
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -299,12 +305,7 @@ section {
   box-shadow: var(--card-shadow);
 }
 
-@media (max-width: 860px) {
-  .skills-grid,
-  .tech-grid {
-    grid-template-columns: 1fr;
-  }
-}
+/* Handled by responsive auto-fit/auto-fill columns */
 
 .about-section .section-heading {
   text-align: center;
@@ -738,7 +739,7 @@ nav {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: 1.5rem;
   max-width: 1100px;
   margin: 0 auto 2rem;
@@ -851,7 +852,7 @@ nav {
   max-width: 1100px;
   margin: 1.25rem auto 0;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
   gap: 1.5rem;
 }
 
@@ -933,11 +934,7 @@ nav {
   color: white;
 }
 
-@media (max-width: 980px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
+/* Handled by responsive auto-fit columns */
 
 @media (max-width: 520px) {
   .contact-card {
@@ -1061,7 +1058,7 @@ nav {
 .download-grid {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   max-width: 920px;
   margin: 0 auto;
 }
@@ -1116,11 +1113,7 @@ nav {
   color: #64748b;
 }
 
-@media (max-width: 860px) {
-  .download-grid {
-    grid-template-columns: 1fr;
-  }
-}
+/* Handled by responsive auto-fit columns */
 
 .badge {
   display: inline-flex;
@@ -1561,24 +1554,121 @@ nav {
   }
 }
 
-/* Responsive adjustment for timeline */
+/* Responsive adjustments for mobile, tablet, and foldable viewports */
+@media (max-width: 900px) {
+  /* About section profile image and layout details */
+  .about-image {
+    min-height: unset !important;
+    max-width: 320px !important;
+    height: 320px !important;
+    margin: 0 auto 1.5rem !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+  .about-image img {
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+  .about-details {
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)) !important;
+    gap: 0.75rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Scale down section, main, and footer paddings for all mobile devices */
+  section,
+  .achievements-section,
+  .activities-section,
+  .contact-form-section {
+    padding: 2.5rem 0 !important;
+  }
+  
+  .site-footer {
+    padding: 2.5rem 0 1.5rem !important;
+  }
+
+  main {
+    padding: 1rem 0 2.5rem !important;
+  }
+
+  /* Spacing fix for Hero section buttons/actions */
+  .hero-center {
+    min-height: 50vh !important; /* Prevent excessive vertical space on small tablets/mobile */
+  }
+
+  .hero {
+    padding: 4.5rem 0 1.5rem !important;
+  }
+
+  /* Touch-friendly navigation links container padding and scroll */
+  .nav-links {
+    -webkit-overflow-scrolling: touch !important; /* Enable smooth iOS physics scrolling */
+    padding: 0.25rem 0 !important;
+  }
+
+  .nav-link {
+    font-size: 0.82rem !important;
+    padding: 0.4rem 0.65rem !important; /* Slightly larger hit target */
+  }
+}
+
 @media (max-width: 640px) {
+  /* Timeline adjustments for mobile (width <= 640px) */
   .education-timeline::before {
-    left: 20px;
+    left: 20px !important;
   }
   .timeline-item {
-    gap: 1.25rem;
+    gap: 1.25rem !important;
   }
   .timeline-icon {
-    width: 42px;
-    height: 42px;
-    font-size: 1.1rem;
-    border-width: 3px;
+    width: 42px !important;
+    height: 42px !important;
+    font-size: 1.1rem !important;
+    border-width: 3px !important;
   }
   .timeline-card {
-    padding: 1.5rem;
+    padding: 1.25rem 1.5rem !important;
+  }
+
+  /* Modal container spacing/padding fix for iPhone SE and Z Fold 5 folded (320px - 375px) */
+  .modal-backdrop {
+    padding: 1rem !important;
   }
   .modal-container {
-    padding: 1.75rem 1.5rem;
+    width: min(94%, 650px) !important;
+    padding: 1.75rem 1.25rem !important;
+    border-radius: 1.5rem !important;
+  }
+  
+  .modal-info-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)) !important;
+    gap: 0.75rem !important;
+  }
+
+  /* Hero buttons alignment */
+  .hero-actions {
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .hero-actions .button {
+    width: min(100%, 280px) !important; /* Stacks button nicely on narrow mobile devices */
+  }
+}
+
+@media (max-width: 360px) {
+  /* Extremely narrow viewports (e.g., Galaxy Z Fold folded or older devices) */
+  .nav-link {
+    font-size: 0.76rem !important;
+    padding: 0.35rem 0.45rem !important;
+  }
+  
+  .timeline-card {
+    padding: 1rem !important;
+  }
+
+  .achievement-card {
+    padding: 1.25rem 1rem !important;
   }
 }
