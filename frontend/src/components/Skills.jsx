@@ -11,8 +11,6 @@ const techs = [
   "HTML5",
   "CSS",
   "Tailwind CSS",
-  "Redux",
-  "GraphQL",
   "Rest API",
   "Git",
   "GitHub",
@@ -20,7 +18,6 @@ const techs = [
   "Docker",
   "AWS",
   "Firebase",
-  "Jest"
 ];
 
 const Skills = () => (
