@@ -10,15 +10,16 @@ const education = [
     logo: "/assets/images/techno_logo.png",
     averageCgpa: "7.38",
     equivalentPercentage: "73.8%",
+    studentId: "2213067073",
+    universityId: "13031722051",
     semesters: [
-      { sem: "Semester 1", cgpa: "7.50" },
-      { sem: "Semester 2", cgpa: "7.30" },
-      { sem: "Semester 3", cgpa: "7.40" },
-      { sem: "Semester 4", cgpa: "7.25" },
-      { sem: "Semester 5", cgpa: "7.45" },
-      { sem: "Semester 6", cgpa: "7.35" },
-      { sem: "Semester 7", cgpa: "7.55" },
-      { sem: "Semester 8", cgpa: "7.24" }
+      { sem: "Semester 1", cgpa: "7.11" },
+      { sem: "Semester 2", cgpa: "8.05" },
+      { sem: "Semester 3", cgpa: "7.55" },
+      { sem: "Semester 4", cgpa: "6.62" },
+      { sem: "Semester 5", cgpa: "7.43" },
+      { sem: "Semester 6", cgpa: "7.43" },
+      { sem: "Semester 7", cgpa: "7.53" }
     ],
     coursework: [
       "Data Structures & Algorithms",
