@@ -53,8 +53,10 @@ const education = [
       "English"
     ],
     achievements: [
-      "Built a solid analytical foundation in Calculus, Algebra, and Physics.",
-      "Developed introductory programming skills in Python/C++ during computer science coursework."
+      "Developed a strong foundation in Mathematics, Computer Science, and analytical problem-solving.",
+      "Gained hands-on exposure to MySQL database concepts, SQL queries, and basic database management.",
+      "Strengthened logical thinking and programming fundamentals, which later supported software development and DSA learning.",
+      "Actively participated in academic and technical learning activities."
     ],
     description: "Completed higher secondary education in the Science stream with a focus on advanced Mathematics, Physics, and computer science concepts."
   },
