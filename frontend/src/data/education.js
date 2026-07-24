@@ -9,7 +9,7 @@ const education = [
     score: "CGPA: 7.38",
     logo: "/assets/images/techno_logo.png",
     averageCgpa: "7.38",
-    equivalentPercentage: "66.30%",
+    equivalentPercentage: "73.8%",
     semesters: [
       { sem: "Semester 1", cgpa: "7.50" },
       { sem: "Semester 2", cgpa: "7.30" },
@@ -34,7 +34,7 @@ const education = [
       "Completed NPTEL Certification in Cyber Security, gaining expertise in cryptography, network security, and secure protocols.",
       "Hands-on experience in Artificial Intelligence and Machine Learning, specializing in model optimization."
     ],
-    description: "Specialized undergraduate program focusing on full-stack development, cyber security protocols, cryptographic systems, and software engineering principles."
+    description: "Undergraduate program focusing on full-stack development, cyber security protocols, cryptographic systems, and software engineering principles."
   },
   {
     id: "class12",

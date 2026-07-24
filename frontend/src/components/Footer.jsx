@@ -3,7 +3,7 @@ const Footer = () => (
     <div className="footer-top">
       <div className="footer-profile">
         <p className="footer-title">Md Meraz Raza Khan</p>
-        <p className="footer-subtitle">Software Engineer & Aspiring AI Enthusiast</p>
+        <p className="footer-subtitle">Software Developer Engineer & Aspiring AI Enthusiast</p>
       </div>
     </div>
     <div className="footer-divider" />

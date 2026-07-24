@@ -8,9 +8,9 @@ const About = () => (
         <img src={profileImage} alt="Profile" />
       </div>
       <div className="about-content">
-        <h3 className="about-title">Software Engineer & Aspiring AI Enthusiast</h3>
+        <h3 className="about-title">Software Developer Engineer & Aspiring AI Enthusiast</h3>
         <p className="about-intro">
-          I am a passionate Software Engineer & Aspiring AI Enthusiast and a Computer Science undergraduate specializing in Cyber Security. I have a strong interest in Full-Stack Development, Data Structures & Algorithms, and AI-driven applications. I enjoy building scalable, user-friendly web applications and solving real-world problems through clean, efficient, and maintainable code.
+          I am a passionate Software Developer Engineer & Aspiring AI Enthusiast and a Computer Science undergraduate specializing in Cyber Security. I have a strong interest in Full-Stack Development, Data Structures & Algorithms, and AI-driven applications. I enjoy building scalable, user-friendly web applications and solving real-world problems through clean, efficient, and maintainable code.
         </p>
         <p className="about-intro">
           My journey in software engineering has equipped me with a diverse skill set, allowing me to tackle complex challenges and deliver innovative solutions. I am committed to continuous learning and staying updated with the latest industry trends.

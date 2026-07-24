@@ -16,7 +16,7 @@ const Hero = () => {
             </span>
           ))}
         </h1>
-        <p className="hero-subtitle">Software Engineer & Aspiring AI Enthusiast</p>
+        <p className="hero-subtitle">Software Developer Engineer & Aspiring AI Enthusiast</p>
         <div className="hero-actions">
           <a className="button" href="#contact">
             Contact Me
